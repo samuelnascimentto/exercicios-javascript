@@ -1,15 +1,11 @@
-function fibonacci(num){
-    let f0 = 0;
-    let f1 = 1;
+function numeroPrimo(numero){
 
-    for(let i=2; i<=num; i++){
-    
-        let laco = f0;
-        f0 = f1;
-        f1 = f0 + i;
-        
+    for(let i =2; i<numero; i++){
+
+        if(numero % i == 0){
+            return false;
+        }
     }
-    return f1;
+    return numero > 1;
 }
-
-console.log(fibonacci(11));
+console.log(numeroPrimo(11));
