@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2">
+    <title>Document</title>
+    <style>
+        #area{
+            font: normal 45px arial;
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            text-align: center;
+            line-height: 300px;
+            margin: 170px 520px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let area = window.document.getElementById('area')
+
+    // addEventListener('click', clicar);
+    // addEventListener('mouseenter', entrar);
+    // addEventListener('click', entrar); não funcionou :(
+
+
+    function clicar(){
+        area.innerText = 'Clicou'
+        area.style.background = 'green'
+    }
+    
+    function entrar(){
+        area.innerHTML = 'Entrou '
+        area.style.background = 'olive'
+    }
+    
+    function sair(){
+        area.innerHTML = 'Saiu'
+        area.style.background = 'blue'
+    }
+
+</script>
+
+<!-- essa html é a respeito da aula 10 do curso em video sobre js -->
